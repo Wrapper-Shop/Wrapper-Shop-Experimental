@@ -220,8 +220,7 @@ main {
 }
 
 img.thumbnail {
-  width: 280px;
-  height: 157px;
+  height: 160px;
   border-radius: 6px;
   /** dehover animation **/
   transition: 0.15s cubic-bezier(0.22, 0.61, 0.36, 1);
