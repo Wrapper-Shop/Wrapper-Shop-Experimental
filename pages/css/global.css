@@ -1,13 +1,13 @@
 /***
-this css has the general header/footer layout stuff
+this css has the general page stuff
 ***/
 
 /**
 general
 **/
-html,body{
-	background: #fff;
-	color: #474747;
+html, body {
+	background: #eee;
+	color: #222;
 	font: 16px/1.5 'Sailec', Arial, sans-serif;
 	width:100%;height:100%;
 }
@@ -72,11 +72,13 @@ header {
 .button_big:hover {
 	text-decoration: underline;
 }
+/**
+secondary dropdown in case of larger content
+**/
 .dropdown {
-  position: relative;
-  display: inline-block;
+	position: relative;
+	display: inline-block;
 }
-
 .dropdown-content {
 	/* style */
 	background-color: #444;
@@ -89,7 +91,6 @@ header {
 	position: absolute;
 	min-width: 160px;
 }
-
 .dropdown-content a {
 	/* style */
 	color: #ddd;
@@ -98,15 +99,12 @@ header {
 	display: block;
 	padding: 0.5px 20px;
 }
-
-.dropdown-content a:hover {background-color: #222; color: #ff7920;}
-
+.dropdown-content a:hover { background-color: #222; color: #ff7920; }
 .dropdown:hover .dropdown-content {
-  display: block;
+	display: block;
 }
-
 .dropdown:hover .dropbtn {
-  background-color: #3e8e41;
+	background-color: #3e8e41;
 }
 
 /**
@@ -163,120 +161,93 @@ header dropdowns
 	border: 1px solid #222;
 	margin: 10px 0;
 }
+
+
+/**
+banner
+**/
 .banner {
-    width: 100%;
-    padding: 90px 40px;
-    background-image: url(../img/banner2020.png);
-    color: #fff;
-    text-align: center;
-    padding-bottom: 400px;
-    background-position: bottom, center;
-    background-repeat-y: no-repeat;
-    background-color: #123;
+	width: 100%;
+	padding: 90px 40px;
+	background-image: url(../img/banner2021background.png);
+	color: #fff;
+	text-align: center;
+	background-position: center, center;
+	background-repeat-x: no-repeat;
+	background-color: #123;
 }
 .banner>h1 {
 	font-size: 30px;
+	text-shadow: 0 0 4px black, 0 0 8px black, 0 0 16px black;
+	font-weight: 800;
 }
-.link-text {
-  cursor: pointer;
-  font-weight: 500;
-  color: #462311;
-  background: #007fffbf;
-  border: 1px solid #00bfff;
-  border-radius: 50px;
-  padding: 8px 12px;
-  margin: 0 5px;
-  transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.link-text {
-  color: #fff;
-}
-.link-text:hover {
-  background-color: #000000;
-}
-a:visited {
-  text-decoration: none;
-  color: #fff;
-}
-a {
-	text-decoration: none;
+/* banner buttons */
+.banner_button {
+	/* style */
+	background: #000000c9;
+	box-shadow: 0 2px 5px -1.5px #0000009e;
+	border: 1px solid #000000;
+	border-radius: 50px;
 	color: #fff;
+	text-decoration: none;
+	transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+	/* layout */
+	padding: 8px 12px;
+	margin: 0 5px;
 }
+.banner_button:hover {
+	background-color: #000000;
+}
+
+/**
+main
+**/
 main {
 	padding: 20px 40px;
 }
 
+/**
+asset element
+**/
 .mod {
-  width: auto;
-  margin: auto;
-  text-align: left;
-  border-radius: 5px;
-  display: inline-table;
-  margin: 9px;
+	/* style */
+    border-radius: 5px;
+	/* layout */
+	display: inline-table;
+    text-align: left;
+    margin: 4px;
+    padding: 5px;
+    padding-bottom: 20px;
 }
-
+.mod:hover {
+    background: #dcdcdc;
+    box-shadow: 0 2px 5px -1.5px #0000009e;
+}
+/* asset text */
+.mod>h3, .mod>p {
+    padding-left: 6px;
+}
 .mod>h3 {
 	margin: 8px 0 0 0;
 }
-
+.mod>p {
+	font-size: 15px;
+	margin: 6px 0 0 0;
+}
+/* asset thumbnail */
 img.thumbnail {
-  height: 160px;
-  border-radius: 6px;
-  /** dehover animation **/
-  transition: 0.15s cubic-bezier(0.22, 0.61, 0.36, 1);
+	height: 160px;
+	border-radius: 6px;
 }
 
-img.thumbnail:hover {
-  transform: scale(1.06);
-  /** hover animation **/
-  transition: .15s cubic-bezier(.39,.9,.27,1.35);
-}
-
-.credit {
-  font-size: 15px;
-  margin: 6px 0 0 0;
-}
-
-.mod button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #5595c7;
-  text-align: center;
-  cursor: pointer;
-  width: 90%;
-  font-size: 18px;
-  border-radius: 5px;
-  transition: 0.15s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-.mod button:hover {
-  filter: opacity(0.7);
-  transition: 0.15s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
+/**
+discord widget
+**/
 iframe.discord-widget {
 	float: right;
 	margin-top: 25px;
 }
-.downloadbutton {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #5595c7;
-  text-align: center;
-  cursor: pointer;
-  width: 90%;
-  font-size: 18px;
-  border-radius: 5px;
-  transition: 0.15s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
 
-.downloadbutton:hover {
-  filter: opacity(0.7);
-  transition: 0.15s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
 /**
 footer
 **/
@@ -302,10 +273,10 @@ footer a:hover {
 	text-decoration: underline;
 }
 footer h2 {
-    margin: 0px;
-    text-transform: uppercase;
-    font-size: 23px;
-    color: #b9b9b9;
+		margin: 0px;
+		text-transform: uppercase;
+		font-size: 23px;
+		color: #b9b9b9;
 }
 
 /**
